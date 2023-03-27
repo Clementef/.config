@@ -1,0 +1,18 @@
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set statusbar-page-percent true
+set page-padding 1
+
+map i recolor
+map p print
+map R reload
+
+set font "Fira Code 9"
+set statusbar-home-tilde true
+set guioptions ""
+set recolor true
+set recolor-lightcolor "#282a36"
+set inputbar-bg "#282a36"
+set inputbar-fg "#f8f8f2"
+set statusbar-bg "#282a36"
+set statusbar-fg "#f8f8f2"

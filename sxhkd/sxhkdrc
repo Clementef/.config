@@ -1,0 +1,44 @@
+#------------------------
+#	power
+
+super + shift + q
+	s_power
+
+#------------------------
+#	software
+
+super + space
+	dmenu_run -p "Run:"
+
+super + b
+	brave
+
+super + Return
+	st
+
+super + shift + n
+	nm-connection-editor
+
+super + g
+	/home/clem/.fehbg
+
+super + x
+	flameshot gui
+
+super + shift + x
+	flameshot screen
+
+#------------------------
+#	notifications
+
+alt + n
+	notify-send -u low "Wifi" "$(s_wifiscan)"
+
+alt + y
+	notify-send -u low "Storage" "$(s_storage)"
+
+alt + c
+	notify-send -u low "Dracula" "$(s_dracula)"
+
+alt + l
+	notify-send -u low "Sessions" "$(s_sessionlist)"
