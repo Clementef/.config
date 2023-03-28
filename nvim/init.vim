@@ -19,7 +19,7 @@ set bg=light
 colorscheme dracula
 highlight Normal guibg=NONE ctermbg=NONE
  function! s:tweak_colors()
- 	highlight Normal guibg=NONE ctermbg=NONE
+     highlight Normal guibg=NONE ctermbg=NONE
     set bg=light
  endfunction
 autocmd! ColorScheme dracula call s:tweak_colors()

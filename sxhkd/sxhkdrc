@@ -16,8 +16,11 @@ super + b
 super + Return
 	st
 
+super + shift + v
+	s_vimmenu
+
 super + v
-	st -e vim +:NERDTree
+	st -e nvim
 
 super + n
 	nm-connection-editor
