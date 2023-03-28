@@ -16,11 +16,14 @@ super + b
 super + Return
 	st
 
-super + shift + n
+super + v
+	st -e vim +:NERDTree
+
+super + n
 	nm-connection-editor
 
 super + g
-	/home/clem/.fehbg
+	fehbg
 
 super + x
 	flameshot gui
@@ -28,6 +31,11 @@ super + x
 super + shift + x
 	flameshot screen
 
+super + c
+    s_runcmd
+
+super + r
+	s_reloadprogram
 #------------------------
 #	notifications
 

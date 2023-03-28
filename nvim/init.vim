@@ -10,14 +10,17 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
 " theme, disable bg color
+set bg=light
 colorscheme dracula
 highlight Normal guibg=NONE ctermbg=NONE
  function! s:tweak_colors()
  	highlight Normal guibg=NONE ctermbg=NONE
+    set bg=light
  endfunction
 autocmd! ColorScheme dracula call s:tweak_colors()
 
@@ -48,6 +51,10 @@ set fileformat=unix
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " default right split
     set splitbelow splitright
+
+" rebind command key
+    noremap ; :
+
 " clear search highlights
     nnoremap <leader><space> :nohlsearch<cr>
 
@@ -67,6 +74,12 @@ set fileformat=unix
 " clipboard copy/paste
 	noremap <C-c> "+y
 	map <C-v> "+p
+
+" Move lines up and down
+	nnoremap <C-m>  :<C-u>m-2<CR>==
+	nnoremap <C-n> :<C-u>m+<CR>==
+    xnoremap <C-m>  :m-2<CR>gv=gv
+    xnoremap <C-n> :m'>+<CR>gv=gv
 
 " Shortcutting split navigation, saving a keypress:
 	map <C-h> <C-w>h
@@ -90,7 +103,7 @@ set fileformat=unix
     nnoremap <leader>k <C-w>-
 
 " shellcheck
-    nnoremap <leader>c :! s_runfile %:p<CR>
+    nnoremap <leader>i :! s_runfile %:p<CR>
 
 " update syntax
     nnoremap <leader>e :edit<CR>
@@ -99,7 +112,7 @@ set fileformat=unix
     nnoremap <leader>v :so ~/.config/nvim/init.vim<CR>
 
 " run in shell
-    nnoremap <leader>C :! %:p<space>
+    nnoremap <leader>I :! %:p<space>
 
 " update vim-plug
 	map <leader>p :PlugInstall<CR>
@@ -108,7 +121,7 @@ set fileformat=unix
 	map <leader>n :NERDTreeToggle<CR>
 
 " Goyo plugin makes text more readable when writing prose:
-	map <leader>g :Goyo \| set linebreak<CR>
+	map <leader>g :Goyo \| set linebreak <CR>
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
