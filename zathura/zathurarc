@@ -6,6 +6,9 @@ set page-padding 1
 map i recolor
 map p print
 map R reload
+map d scroll half-down
+map u scroll half-up
+map D toggle_page_mode
 
 set font "Fira Code 9"
 set statusbar-home-tilde true

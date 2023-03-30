@@ -1,3 +1,5 @@
+" Vim Config
+
 " leader key
 let mapleader =","
 
@@ -115,13 +117,13 @@ set fileformat=unix
     nnoremap <leader>I :! %:p<space>
 
 " update vim-plug
-	map <leader>p :PlugInstall<CR>
+	noremap <leader>p :PlugInstall<CR>
 
 " Nerdtree
-	map <leader>n :NERDTreeToggle<CR>
+	noremap <leader>n :NERDTreeToggle<CR>
 
 " Goyo plugin makes text more readable when writing prose:
-	map <leader>g :Goyo \| set linebreak <CR>
+	noremap <leader>g :Goyo \| set linebreak <CR>
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
-	map <leader>o :setlocal spell! spelllang=en_us<CR>
+	noremap <leader>o :setlocal spell! spelllang=en_us<CR>

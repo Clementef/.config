@@ -16,17 +16,32 @@ super + b
 super + Return
 	st
 
+super + t
+    xset r rate 200 30 
+
+super + shift + e
+	s_vifmmenu
+
+super + e
+	st -e vifmrun
+
 super + shift + v
 	s_vimmenu
 
 super + v
 	st -e nvim
 
+super + m
+    s_manmenu
+
+super + p
+    s_pdfmenu
+
 super + n
 	nm-connection-editor
 
 super + g
-	fehbg
+	s_fehbg
 
 super + x
 	flameshot gui
