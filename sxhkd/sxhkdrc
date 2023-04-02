@@ -8,7 +8,7 @@ super + shift + q
 #	software
 
 super + space
-	dmenu_run -p "Run:"
+	dmenu_run -i -p "Run:"
 
 super + b
 	brave
@@ -16,7 +16,7 @@ super + b
 super + Return
 	st
 
-super + t
+super + [
     xset r rate 200 30 
 
 super + shift + e
