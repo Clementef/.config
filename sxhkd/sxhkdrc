@@ -16,7 +16,7 @@ super + b
 super + Return
 	st
 
-super + [
+super + shift + z
     xset r rate 200 30 
 
 super + shift + e
@@ -68,3 +68,9 @@ alt + c
 
 alt + l
 	notify-send -u low "Sessions" "$(s_sessionlist)"
+
+super + F6
+    brillo -q -A 5
+
+super + F5
+    brillo -q -U 5
