@@ -39,12 +39,19 @@ export PF_COL2=9
 export PF_ASCII="Dragonfly"
 export PF_INFO="ascii title os host kernel shell palette"
 
+#custom
+export USENETWORK=1
+export ZDOTDIR="$HOME/.config/zsh"
+export RES="/home/clem/Resources"
+export BIN="/usr/local/bin"
+export TERM="st"
+
 #PATH
 export PATH="${PATH}:/home/clem/Software"
 export PATH="${PATH}:/home/clem/Software/Personal"
 export PATH="${PATH}:/home/clem/Software/Personal/s_dwmblocks"
 
-fehbg & #desktop background
+s_fehbg & #desktop background
 sxhkd & #keyboard shortcuts
 dunst & #notifications
 unclutter --timeout 0.5 --jitter 2 --ignore-scrolling --start-hidden & #mouse hiding

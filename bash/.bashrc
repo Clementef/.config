@@ -1,6 +1,4 @@
-#
 # ~/.bashrc
-#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -9,7 +7,19 @@
 #set -o vi
 
 #aliases
+v()
+{
+    local dst="$(command vifmrun --choose-dir - "$@")"
+    if [ -z "$dst" ]; then
+        echo 'Directory picking cancelled/failed'
+        return 1
+    fi
+    cd "$dst"
+}
 alias vim="nvim" 
+alias vifm="vifmrun ./"
+alias e="exit"
+alias vimn="nvim +:NERDTree"
 
 #colors and prompt
 alias ls='ls --color=auto'
