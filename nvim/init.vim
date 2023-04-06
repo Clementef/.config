@@ -26,9 +26,6 @@ highlight Normal guibg=NONE ctermbg=NONE
  endfunction
 autocmd! ColorScheme dracula call s:tweak_colors()
 
-" clipboard
-set clipboard+=unnamedplus
-
 " highlight and live search
 set hlsearch
 set incsearch
