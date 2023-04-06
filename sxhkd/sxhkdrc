@@ -11,7 +11,7 @@ super + space
 	dmenu_run -i -p "Run:"
 
 super + b
-	brave
+	firefox
 
 super + Return
 	st
@@ -23,7 +23,7 @@ super + shift + e
 	s_vifmmenu
 
 super + e
-	st -e vifmrun
+	st -e vifm
 
 super + shift + v
 	s_vimmenu
@@ -69,8 +69,14 @@ alt + c
 alt + l
 	notify-send -u low "Sessions" "$(s_sessionlist)"
 
-super + F6
+super + F8
+    brillo -q -U 5
+
+super + F9
     brillo -q -A 5
 
-super + F5
+super + shift + 3
     brillo -q -U 5
+
+super + shift + 4
+    brillo -q -A 5
