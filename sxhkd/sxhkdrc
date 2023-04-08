@@ -34,6 +34,9 @@ super + v
 super + m
     s_manmenu
 
+super + shift +m
+    s_mountmenu
+
 super + p
     s_pdfmenu
 
