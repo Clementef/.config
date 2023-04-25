@@ -4,7 +4,7 @@
 let mapleader =","
 
 " Vim-Plug
-call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
+call plug#begin(system('echo -n "$HOME/.config/nvim/plugged"'))
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
@@ -13,17 +13,18 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdcommenter'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 call plug#end()
 
 " theme, disable bg color
-set bg=light
+set termguicolors
 colorscheme dracula
-highlight Normal guibg=NONE ctermbg=NONE
- function! s:tweak_colors()
-     highlight Normal guibg=NONE ctermbg=NONE
-    set bg=light
- endfunction
+" highlight Normal guibg=NONE ctermbg=NONE
+" highlight normal guibg=none ctermbg=none
+function! s:tweak_colors()
+    set termguicolors
+endfunction
 autocmd! ColorScheme dracula call s:tweak_colors()
 
 " highlight and live search
@@ -75,7 +76,7 @@ set fileformat=unix
 
 " clipboard copy/paste
 	noremap <C-c> "+y
-	map <C-v> "+p
+	noremap <C-v> "+p
 
 " Move lines up and down
 	nnoremap <C-m>  :<C-u>m-2<CR>==
@@ -91,7 +92,6 @@ set fileformat=unix
 
 " new tab
 	nnoremap <leader>t :tabnew<CR>
-
 " window split vertical
     nnoremap <leader>s <C-w>v    
 
@@ -118,6 +118,12 @@ set fileformat=unix
 
 " update vim-plug
 	noremap <leader>p :PlugInstall<CR>
+
+" vim-markdown
+    noremap <leader>m <Plug>MarkdownPreviewToggle
+
+" pandoc render
+   noremap <leader>M :! s_mdtopdf "$(basename % .md)" && zathura "$(basename % .md).pdf"
 
 " Nerdtree
 	noremap <leader>n :NERDTreeToggle<CR>

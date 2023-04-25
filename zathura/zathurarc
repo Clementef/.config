@@ -9,6 +9,16 @@ map R reload
 map d scroll half-down
 map u scroll half-up
 map D toggle_page_mode
+map S toggle_statusbar
+map f toggle_fullscreen
+map [fullscreen] i recolor
+map [fullscreen] p print
+map [fullscreen] R reload
+map [fullscreen] d scroll half-down
+map [fullscreen] u scroll half-up
+map [fullscreen] D toggle_page_mode
+map [fullscreen] S toggle_statusbar
+map [fullscreen] f toggle_fullscreen
 
 set font "Fira Code 12"
 set statusbar-home-tilde true
