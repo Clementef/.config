@@ -14,6 +14,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdcommenter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'dkarter/bullets.vim'
 
 call plug#end()
 
@@ -21,7 +22,6 @@ call plug#end()
 set termguicolors
 colorscheme dracula
 " highlight Normal guibg=NONE ctermbg=NONE
-" highlight normal guibg=none ctermbg=none
 function! s:tweak_colors()
     set termguicolors
 endfunction
@@ -36,9 +36,15 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
+" soft break indentation
+set breakindent
+set showbreak=\ \ \ 
+
 " tabs to spaces
 set expandtab
 set autoindent
+set breakindent
+" set briopt+=list:-1
 set fileformat=unix
 
 " basics
@@ -109,6 +115,7 @@ set fileformat=unix
 
 " update syntax
     nnoremap <leader>e :edit<CR>
+    nnoremap <leader>E :write \| :edit <CR>
 
 " source config file
     nnoremap <leader>v :so ~/.config/nvim/init.vim<CR>
@@ -123,13 +130,18 @@ set fileformat=unix
     noremap <leader>m <Plug>MarkdownPreviewToggle
 
 " pandoc render
-   noremap <leader>M :! s_mdtopdf "$(basename % .md)" && zathura "$(basename % .md).pdf"
+   noremap <leader>M :! s_mdtopdf %< && zathura %<.pdf <CR>
 
 " Nerdtree
 	noremap <leader>n :NERDTreeToggle<CR>
 
-" Goyo plugin makes text more readable when writing prose:
-	noremap <leader>g :Goyo \| set linebreak <CR>
+" make personal programs executable
+    noremap <leader>b :!s_buildall<CR>
+
+" Goyo/Pencil for writing prose:
+    noremap <leader>g :Goyo \| set linebreak \| :w \| :edit \| :normal zz <CR>
+" reload Goyo
+    noremap <leader>G :Goyo \| :Goyo \| set linebreak \| :w \| :edit \| :normal zz <CR>
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	noremap <leader>o :setlocal spell! spelllang=en_us<CR>

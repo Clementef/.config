@@ -4,6 +4,9 @@
 super + shift + q
 	s_power
 
+super + + q
+	s_quicklogout
+
 #------------------------
 #	software
 
@@ -21,6 +24,9 @@ super + shift + z
 
 super + o
     st -e alsamixer
+
+super + shift + o
+    speedcrunch
 
 super + shift + e
 	s_vifmmenu
@@ -50,7 +56,7 @@ super + n
 	nm-connection-editor
 
 super + g
-	s_fehbg
+    st -e glances
 
 super + x
 	flameshot gui
@@ -63,6 +69,9 @@ super + c
 
 super + r
 	s_reloadprogram
+
+super + shift + u
+    s_resetdisplay
 #------------------------
 #	notifications
 
