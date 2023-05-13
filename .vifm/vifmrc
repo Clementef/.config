@@ -165,18 +165,8 @@ command! reload :write | restart full
 " program.
 
 " Pdf
-filetype {*.pdf},<application/pdf>
-       \ {Open in Preview}
-       \ open -a Preview.app,
-       \ {Open in Skim}
-       \ open -a Skim.app,
-fileviewer {*.pdf},<application/pdf> pdftotext -nopgbrk %c -
-
-" Image Viewer
-fileviewer *.pdf
-    \ vifmimg pdf %px %py %pw %ph %c
-    \ %pc
-    \ vifmimg clear
+filetype *.pdf
+       \ zathura %c &
 
 fileviewer *.djvu
     \ vifmimg djvu %px %py %pw %ph %c
@@ -226,12 +216,8 @@ filetype {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
          \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
          \*.as[fx]},
         \<video/*>
-       \ {Open in VLC}
-       \ open -a VLC.app,
-       \ {Open in QuickTime Player}
-       \ open -a QuickTime\ Player.app,
-       \ {Open in MPlayerX}
-       \ open -a MPlayerX.app,
+       \ {Open in Zathura}
+       \ zathura %c &
 fileviewer {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
            \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
            \*.as[fx]},

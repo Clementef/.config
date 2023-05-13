@@ -17,6 +17,10 @@ map u scroll half-up
 map D toggle_page_mode
 map S toggle_statusbar
 map f toggle_fullscreen
+map [fullscreen] ; focus_inputbar :
+map [fullscreen] = zoom in
+map [fullscreen] - zoom out
+map [fullscreen] + zoom best-fit
 map [fullscreen] i recolor
 map [fullscreen] p print
 map [fullscreen] R reload

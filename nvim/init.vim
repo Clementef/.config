@@ -38,6 +38,7 @@ set shiftwidth=4
 
 " soft break indentation
 set breakindent
+set linebreak
 set showbreak=\ \ \ 
 
 " tabs to spaces
