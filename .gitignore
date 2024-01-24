@@ -10,8 +10,3 @@ htop/
 mpv/
 pcmanfm/
 Bitwarden/
-vifm/scripts/
-vifm/vifm-help.txt
-vifm/vifminfo.json*
-qtile/__pycache__/
-nvim/lazy-lock.json

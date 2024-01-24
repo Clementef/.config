@@ -113,13 +113,19 @@ _cols={
         "alt":"#44475a"
 }
 
+tall_margin = 250
+
 layouts = [
     # layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
-    layout.MonadTall(name="tall",
+    layout.MonadTall(name="tile",
                      margin=5, border_width=1,
                      border_normal=_cols["alt"],
                      border_focus=_cols["hl"]),
     layout.Max(name="max "),
+    layout.Max(name="tall",
+                margin=[-2,tall_margin,-2,tall_margin],
+                border_width=1,
+                border_focus=_cols["hl"]),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
