@@ -1,0 +1,17 @@
+QtProject.conf
+gtk-3.0/
+libfm/
+dconf/
+procps/
+yay/
+rstudio/
+R/
+htop/
+mpv/
+pcmanfm/
+Bitwarden/
+vifm/scripts/
+vifm/vifm-help.txt
+vifm/vifminfo.json*
+qtile/__pycache__/
+nvim/lazy-lock.json

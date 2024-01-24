@@ -1,0 +1,3 @@
+# .config
+
+## Software Configurations

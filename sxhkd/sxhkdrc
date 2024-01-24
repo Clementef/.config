@@ -1,0 +1,111 @@
+# ----------------------
+#   mouse control
+
+alt + a
+    xdotool click 1
+
+alt + w
+    xdotool click 2
+
+alt + s
+    xdotool click 3
+
+# ----------------------
+#   brightness
+
+XF86MonBrightnessDown
+    screen_brightness -1
+
+XF86MonBrightnessUp
+    screen_brightness 1
+
+# ----------------------
+#   keyboard backlight
+
+XF86KbdBrightnessUp
+    keyboard_brightness 25
+
+XF86KbdBrightnessDown
+    keyboard_brightness -25
+
+# ----------------------
+#   Media Keys
+
+XF86AudioPrev
+    notify-send "audio prev"
+
+XF86AudioPlay
+    notify-send "audio play"
+
+XF86AudioNext
+    notify-send "audio next"
+
+# ----------------------
+#   Mac Keys
+
+XF86LaunchA
+    notify-send "mission control button"
+
+XF86LaunchB
+    storage
+
+# ----------------------
+#   sound
+
+XF86AudioLowerVolume
+    sound_change 5%-
+
+XF86AudioRaiseVolume
+    sound_change 5%+
+
+XF86AudioMute
+    sound_toggle
+
+# ----------------------
+#   dmenu
+
+super + space
+	dmenu_run -i -p "Run:"
+
+super + m
+	manmenu
+
+super + p
+	powermenu
+
+super + o
+	pdfmenu
+
+super + i
+	cmdmenu
+
+# ----------------------
+#   file explorer
+
+super + e
+	pcmanfm
+
+# ----------------------
+#  screenshot
+
+super + x
+	flameshot gui
+
+super + shift + x
+	flameshot screen
+
+# ----------------------
+#  R calculator
+
+super + r
+    alacritty -e R
+
+# ----------------------
+#  neovim
+
+super + v
+    alacritty -e nvim
+
+super + shift + v
+    alacritty -e vifm ~
+
