@@ -28,9 +28,16 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+from libqtile.command import lazy
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "alacritty"
+
+def switch_layout(qtile,target):
+    if not qtile.current_layout.name == "tile":
+        qtile.cmd_to_layout_index(0)
+    else:
+        qtile.cmd_to_layout_index(target)
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -58,29 +65,31 @@ keys = [
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
-    Key(
-        [mod, "shift"],
-        "Return",
-        lazy.layout.toggle_split(),
-        desc="Toggle between split and unsplit sides of stack",
-    ),
+    # Key(
+    #     [mod, "shift"],
+    #     "Return",
+    #     lazy.layout.toggle_split(),
+    #     desc="Toggle between split and unsplit sides of stack",
+    # ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    # Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "Tab", lazy.function(switch_layout,1)),
+    Key([mod], "q", lazy.function(switch_layout,2)),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
-    Key(
-        [mod],
-        "f",
-        lazy.window.toggle_fullscreen(),
-        desc="Toggle fullscreen on the focused window",
-    ),
+    # Key(
+    #     [mod],
+    #     "Tab",
+    #     lazy.window.toggle_fullscreen(),
+    #     desc="Toggle fullscreen on the focused window",
+    # ),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     # Key([mod], "space", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 ]
 
-groups = [Group(i) for i in "asdf"]
+groups = [Group(i) for i in "asdfg"]
 
 for i in groups:
     keys.extend(
@@ -113,7 +122,7 @@ _cols={
         "alt":"#44475a"
 }
 
-tall_margin = 250
+tall_margin = 200
 
 layouts = [
     # layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
@@ -123,7 +132,7 @@ layouts = [
                      border_focus=_cols["hl"]),
     layout.Max(name="max "),
     layout.Max(name="tall",
-                margin=[-2,tall_margin,-2,tall_margin],
+                margin=[0,tall_margin,0,tall_margin],
                 border_width=1,
                 border_focus=_cols["hl"]),
     # Try more layouts by unleashing below layouts.
@@ -175,10 +184,11 @@ screens = [
                     battery=0,   # Specify the battery number (0 for the first battery)
                     charge_char='↑',  # Symbol for charging
                     discharge_char='↓',  # Symbol for discharging
-                    format="{char} {percent:2.0%}",  # Format string for the widget
+                    # format="{char} {percent:2.0%}",  # Format string for the widget
+                    format = " {percent:2.0%} ({hour:d}:{min:02d})",
                     low_foreground="#ff5555",
-                    low_percentage=20.0,
-                    notify_below=20.0,
+                    low_percentage=.20,
+                    notify_below=.20,
                 ),
                 # widget.Chord(
                 #     chords_colors={
