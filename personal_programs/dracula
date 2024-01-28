@@ -1,2 +1,0 @@
-dracula_data=$(cat ~/documents/notes/colors/dracula.txt)
-notify-send -u normal -r "1101" "$dracula_data"

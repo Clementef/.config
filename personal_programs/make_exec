@@ -1,1 +1,0 @@
-sudo chmod +x /usr/local/bin/personal/* && notify-send -u low -r "1005" "personal programs were made executable"

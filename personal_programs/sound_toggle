@@ -1,9 +1,0 @@
-mixer_state=$(amixer set Master toggle)
-percentage=$(echo "$mixer_state" | grep -oE '[0-9]+%')
-mute_state=$(echo $mixer_state | grep -o "\[on\]")
-case "$mute_state" in
-	"[on]")	notify-send -u "normal" -r "1002" "Sound: $percentage Unmuted"
-			;;
-	*)		notify-send -u "normal" -r "1002" "Sound: $percentage Muted"
-			;;
-esac

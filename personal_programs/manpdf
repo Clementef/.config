@@ -1,2 +1,0 @@
-#!/bin/bash
-man -Tpdf $1 | zathura -

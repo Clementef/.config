@@ -1,3 +1,0 @@
-#!/bin/sh
-uinp="$(echo "" | dmenu -l 0 -p "Cmd:" -sb "#282a36" -h 50)"
-[ -n "$uinp" ] && notify-send -u "low" "\$ $uinp" "$(eval $uinp)"
