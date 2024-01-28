@@ -44,7 +44,7 @@ XF86AudioNext
 #   Mac Keys
 
 XF86LaunchA
-    notify-send "mission control button"
+    blocks
 
 XF86LaunchB
     storage
@@ -60,6 +60,12 @@ XF86AudioRaiseVolume
 
 XF86AudioMute
     sound_toggle
+
+# ----------------------
+#   dmenu
+
+super + z
+    xset r rate 250 40
 
 # ----------------------
 #   dmenu
