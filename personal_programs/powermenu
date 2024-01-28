@@ -1,0 +1,12 @@
+#!/bin/bash
+options="\nlogout\nsleep\nreboot\npower off\nrestart\nshutdown"
+uinp="$(echo -e "$options" | dmenu -p "Power:")"
+case $uinp in
+	"logout") user_logout ;;
+	"sleep") systemctl suspend ;;
+	"reboot") reboot ;;
+	"restart") reboot ;;
+	"shutdown") shutdown -h now ;;
+	"power off") shutdown -h now ;;
+	*) exit 0 ;; 
+esac

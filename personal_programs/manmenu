@@ -1,0 +1,7 @@
+#!/bin/bash
+man_select=$(apropos . | awk '{print $1}')
+menu_select=$(echo -e "\n$man_select" | dmenu -i -p "Man:")
+if [ -n "$menu_select" ]; then
+    notify-send -u low "generating pdf: $menu_select"
+    manpdf "$menu_select"
+fi

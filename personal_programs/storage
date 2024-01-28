@@ -1,0 +1,2 @@
+storage=$(df -h | grep /dev/sda3 | awk '{print $5, "Full,", $3, "/", $4}')
+notify-send -u normal -r "1004" "storage: $storage"

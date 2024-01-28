@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Error: Argument \$1 is not provided."
+    exit 1
+fi
+
+# Get the current brightness value
+current_brightness=$(cat /sys/class/leds/smc::kbd_backlight/brightness)
+
+# system max brightness or custom max
+# max_brightness=$(cat /sys/class/leds/smc::kbd_backlight/max_brightness)
+max_brightness=250
+
+# user argument
+new_brightness=$((current_brightness + "$1"))
+
+# constrain brightness
+if [ "$new_brightness" -lt 0 ]; then
+    new_brightness=0
+elif [ "$new_brightness" -gt "$max_brightness" ]; then
+    new_brightness="$max_brightness"
+fi
+
+# assign new brightness
+echo "$new_brightness" > /sys/class/leds/smc::kbd_backlight/brightness
+notify-send -u "normal" -r "1003" "keyboard: $new_brightness"

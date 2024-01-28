@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# user argument
+if [ -z "$1" ]; then
+    echo "Error: Argument \$1 is not provided."
+    exit 1
+fi
+
+# Get the current brightness value
+current_brightness=$(cat /sys/class/backlight/acpi_video0/brightness)
+max_brightness=$(cat /sys/class/backlight/acpi_video0/max_brightness)
+new_brightness=$((current_brightness + "$1"))
+
+if [ "$new_brightness" -le 1 ]; then
+    new_brightness=1
+elif [ "$new_brightness" -ge "$max_brightness" ]; then
+    new_brightness="$max_brightness"
+fi
+
+echo "$new_brightness" > /sys/class/backlight/acpi_video0/brightness
+notify-send -u "normal" -r "1001" "brightness: $new_brightness"

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# generate list
+optlist=$(find "$HOME/Downloads" "$HOME/documents/" -type f | grep ".pdf$")
+opttable=$(echo "$optlist" | awk -F"/" '{print $0, $NF, "("NR")"}')
+optnames=$(echo "$opttable" | awk '{print $2, $3}')
+
+# dmenu
+uinp=$(echo "$optnames" | dmenu -i -p "Pdf:")
+
+# opttable lookup
+selectedpath=$(echo "$opttable" | grep -m 1 "$uinp" | awk '{print $1}')
+
+# open pdf with zathura
+[ -n "$uinp" ] && notify-send -u "low" "Opening $uinp" && zathura "$selectedpath"

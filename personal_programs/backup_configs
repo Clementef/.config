@@ -1,0 +1,7 @@
+#!/bin/bash
+
+config=$HOME/.config
+
+while IFS= read -r file; do
+    eval cp $file $config/external_files/
+done < $config/external_files_list.txt
