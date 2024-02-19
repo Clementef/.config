@@ -1,0 +1,19 @@
+#!/bin/bash
+# enable dotfiles
+shopt -s dotglob
+# home dir files
+source_directory="$HOME"
+destination_directory="$source_directory/.config/X11/home"
+file_list_file="$source_directory/.config/home_dir_files.txt"
+
+# Check if the file list exists
+if [ ! -f "$file_list_file" ]; then
+    echo "File list not found: $file_list_file"
+    exit 1
+fi
+
+# Read the file list and copy each file to the destination directory
+while IFS= read -r file; do
+    cat "$source_directory/$file" | tee "$destination_directory/$file" >/dev/null
+done < "$file_list_file"
+

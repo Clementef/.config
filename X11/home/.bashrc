@@ -8,6 +8,10 @@
 # PATH
 export PATH=$PATH:/usr/lib/rstudio/
 export PATH=$PATH:/usr/local/bin/personal/
+export PATH=$PATH:/usr/local/bin/personal/rmd/
+export PATH=$PATH:/usr/local/bin/personal/notes/
+export PATH=$PATH:/usr/local/bin/personal/dwmstatus/
+export PATH=$PATH:/usr/local/bin/personal/colorscripts/
 
 # environment variables
 # firefox

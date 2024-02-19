@@ -4,4 +4,4 @@ pactarget="$HOME/.config/pacman/installed_packages.txt"
 cp -r "/etc/X11/xorg.conf.d/" "$target" && echo "xorg.conf.d done"
 cp -r "/etc/udev/rules.d/" "$target" && echo "rules.d done"
 pacman_package_list > "$pactarget" && echo "pacman package list done"
-
+./home_grab && echo "home config copied"

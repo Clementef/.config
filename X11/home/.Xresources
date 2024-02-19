@@ -1,0 +1,14 @@
+! xscreensaver config
+! Font for regular texts.
+! Font names are case-insensitive.
+! You can use a comma-separated list of fonts to set a fallback font.
+xscreensaver-auth.default.Dialog.bodyFont: FiraCode Nerd Font Mono 12, DejaVu Serif 12
+
+! Window background color. You can use color names.
+xscreensaver-auth.default.Dialog.background: #282a36
+
+! no new login button
+xscreensaver-auth.default.*.newLoginCommand:
+
+! Main text color. You can also use HEX color codes.
+! xscreensaver-auth.default.Dialog.foreground: #f8f8f2
