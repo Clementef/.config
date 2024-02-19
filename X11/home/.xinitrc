@@ -3,9 +3,6 @@
 # load xresources
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-# set variables
-BROWSER=firefox
-
 # X mouse settings
 x_reset
 

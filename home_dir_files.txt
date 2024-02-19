@@ -4,3 +4,4 @@
 .xinitrc
 .xscreensaver
 .Xresources
+.profile
