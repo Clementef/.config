@@ -1,0 +1,4 @@
+less
+# options: less,system,network
+# dwmstatus reads the first line of this
+# file to determine mode.

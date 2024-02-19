@@ -31,7 +31,7 @@ map [fullscreen] D toggle_page_mode
 map [fullscreen] S toggle_statusbar
 map [fullscreen] f toggle_fullscreen
 
-set font "FiraCode Nerd Font 12"
+set font "FiraCode Nerd Font 11"
 set statusbar-home-tilde true
 set recolor false
 set recolor-lightcolor "#282a36"

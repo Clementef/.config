@@ -11,6 +11,12 @@ alt + s
     xdotool click 3
 
 # ----------------------
+#   power button override
+
+XF86PowerOff
+    xscreensaver-command -lock
+
+# ----------------------
 #   brightness
 
 XF86MonBrightnessDown
@@ -62,12 +68,12 @@ XF86AudioMute
     sound_toggle
 
 # ----------------------
-#   dmenu
+#   reset X mouse/keyboard settings
 
 super + z
-    xset r rate 250 40
+    x_reset
 
-# ----------------------
+# ---------------------
 #   dmenu
 
 super + space
@@ -84,6 +90,17 @@ super + o
 
 super + i
 	cmdmenu
+
+super + u
+	notesmenu
+
+super + y
+	systemmenu
+
+# ----------------------
+#   terminal
+super + Return
+    st
 
 # ----------------------
 #   file explorer

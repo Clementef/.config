@@ -44,7 +44,8 @@ opt.incsearch = true
 opt.backspace = "indent,eol,start"
 
 -- clipboard
-opt.clipboard:append("unnamedplus")
+-- opt.clipboard:append("unnamedplus")
+opt.clipboard = 'unnamedplus'
 
 -- default right split
 opt.splitright = true
@@ -63,3 +64,5 @@ opt.scrolloff = 8
 -- update time
 opt.updatetime = 50
 
+-- markdown preview browser
+vim.g.mkdp_browser = 'firefox'

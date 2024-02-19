@@ -1,0 +1,4 @@
+status      dwmstatusmenu 
+network     nm-connection-editor
+storage     storage
+dracula     dracula

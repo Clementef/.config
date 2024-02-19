@@ -1,0 +1,5 @@
+# /etc/udev/rules.d/99-custom-battery.rules
+
+# Grant access to battery files for BAT0
+SUBSYSTEM=="power_supply", KERNEL=="BAT0", MODE="0664", GROUP="users"
+

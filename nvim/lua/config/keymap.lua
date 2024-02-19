@@ -23,15 +23,13 @@ end
 nmapcmd(' ', 'nohl')
 nmapcmd('<ESC>', 'nohl')
 
--- compile and run in C
-nmapcmd('<leader>r', '!gcc % -o out.exe & out.exe')
-
--- change pwd to file's parent and open windows software.
-nmapcmd('<leader>e', 'cd %:p:h | !explorer .')
-nmapcmd('<leader>c', 'cd %:p:h | !start cmd.exe')
-
 -- save
 nmapcmd('<C-s>', 'w')
+
+-- open in pcmanfm
+nmapcmd('<leader>e', 'silent !pcmanfm %:p:h')
+
+nmapcmd('<leader>r', '!run %')
 
 -- rebind command
 nmap(';',':')
@@ -87,6 +85,9 @@ nmapcmd('<leader>i7', 'LoremIpsum 700')
 nmapcmd('<leader>i7', 'LoremIpsum 700')
 nmapcmd('<leader>i8', 'LoremIpsum 800')
 nmapcmd('<leader>i9', 'LoremIpsum 900')
+
+-- MarkdownPreview
+nmapcmd('<leader>m', 'MarkdownPreview')
 
 -- insert line in normal mode
 nmap('<C-m>', 'o<ESC>')

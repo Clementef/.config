@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="leds" KERNEL=="smc::kbd_backlight", RUN+="/bin/chgrp video /sys/class/leds/smc::kbd_backlight/brightness"
+ACTION=="add", SUBSYSTEM=="leds" KERNEL=="smc::kbd_backlight", RUN+="/bin/chmod g+w /sys/class/leds/smc::kbd_backlight/brightness"
