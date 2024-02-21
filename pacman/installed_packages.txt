@@ -18,6 +18,7 @@ go
 godot
 grub
 htop
+hugo
 hwinfo
 libreoffice-still
 lshw
@@ -57,6 +58,7 @@ torbrowser-launcher
 tree
 ttf-firacode-nerd
 udisks2
+unclutter
 vi
 vifm
 vim

@@ -1,4 +1,7 @@
-status      dwmstatusmenu 
-network     nm-connection-editor
-storage     storage
-dracula     dracula
+status,dwmstatusmenu 
+network,nm-connection-editor
+storage,storage
+dracula,dracula
+wifi toggle,wifiset
+wifi off,wifiset off
+wifi on,wifiset on
