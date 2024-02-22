@@ -1,5 +1,0 @@
-$HOME/.xinitrc
-$HOME/.fehbg
-$HOME/.bashrc
-$HOME/.bash_profile
-$HOME/.gitconfig
