@@ -103,6 +103,11 @@ super + Return
     st
 
 # ----------------------
+#   firefox
+super + n
+    firefox
+
+# ----------------------
 #   file explorer
 
 super + e

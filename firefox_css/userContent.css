@@ -1,0 +1,12 @@
+/* about and new tab page bg */
+@-moz-document url("about:blank") {
+    body {
+        background-color: #282a36 !important;
+    }
+}
+
+@-moz-document url("about:newtab") {  
+    body{
+        background-color:#282a36 !important;
+    }
+}
