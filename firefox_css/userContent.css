@@ -1,12 +1,19 @@
-/* about and new tab page bg */
-@-moz-document url("about:blank") {
-    body {
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
+    body{
         background-color: #282a36 !important;
     }
 }
 
-@-moz-document url("about:newtab") {  
-    body{
-        background-color:#282a36 !important;
+@-moz-document domain(lite.duckduckgo.com) {
+    body {background:#282a36 !important;}
+    a {color: #f8f8f2 !important;}
+    span.link-text {color: #bd93f9 !important;}
+    td {color: #6272a4 !important;}
+    .navbutton {color: #6272a4 !important;}
+    .header { display: none; }
+    input[type=text] {
+        color: #f8f8f2 !important;
+        background-color: #282a36!important;
+        border: 1px solid #44475a!important;
     }
 }

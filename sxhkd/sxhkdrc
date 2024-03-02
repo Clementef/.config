@@ -97,6 +97,12 @@ super + u
 super + y
 	systemmenu
 
+super + v
+	drivemenu
+
+super + shift + v
+	unmountmenu
+
 # ----------------------
 #   terminal
 super + Return

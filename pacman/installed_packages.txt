@@ -85,8 +85,10 @@ tmux 3.4-4
 torbrowser-launcher 0.3.7-1
 tree 2.1.1-1
 ttf-firacode-nerd 3.1.1-1
+udiskie 2.5.2-1
 udisks2 2.10.1-3
 unclutter 1:1.6-3
+unison 2.53.4-2
 vi 1:070224-6
 vifm 0.13-1
 vim 9.1.0080-1
