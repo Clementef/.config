@@ -1,5 +1,4 @@
 QtProject.conf
-gtk-3.0/
 libfm/
 dconf/
 procps/
@@ -20,4 +19,3 @@ discord/
 godot/
 libreoffice/
 GIMP/
-gtk-2.0/

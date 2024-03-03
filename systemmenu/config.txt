@@ -5,3 +5,4 @@ dracula,dracula
 wifi toggle,wifiset
 wifi off,wifiset off
 wifi on,wifiset on
+wallpaper,wallpapermenu
