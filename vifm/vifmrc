@@ -273,6 +273,8 @@ filextype {.blend}
         \ {Open in Blender}
         \ blender %c,
 filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
+        \ {View in feh}
+        \ feh %f,
         \ {View in sxiv}
         \ nsxiv %f,
         \ {View in gpicview}

@@ -14,5 +14,6 @@ udiskie & # usb mounting
 xscreensaver -no-splash & # screen lock
 dwmstatus & # status bar
 firefox & # web browser
+picom --config "$HOME/.config/picom/picom.conf" & # window compositor
 exec dwm # window manager
 # qtile start
