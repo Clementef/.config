@@ -117,7 +117,7 @@ super + n
 #   file explorer
 
 super + e
-	pcmanfm
+	thunar
 
 # ----------------------
 #  screenshot

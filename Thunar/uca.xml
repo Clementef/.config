@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>edit-paste</icon>
+	<name>copy path</name>
+	<submenu></submenu>
+	<unique-id>1709452101391219-1</unique-id>
+	<command>echo %f | xclip -i</command>
+	<description>copy path to clipboard</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal</name>
+	<submenu></submenu>
+	<unique-id>1709443420957855-1</unique-id>
+	<command>st -e sh -c &quot;cd %f; exec bash&quot;</command>
+	<description>Open st here</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>feh</icon>
+	<name>Set Wallpaper</name>
+	<submenu></submenu>
+	<unique-id>1709446416089801-1</unique-id>
+	<command>feh --bg-scale %f</command>
+	<description>Set wallpaper using feh</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>image-x-generic</icon>
+	<name>Open All Images</name>
+	<submenu></submenu>
+	<unique-id>1709447848442417-1</unique-id>
+	<command>nsxiv %f/*</command>
+	<description>Open all images in directory with nsxiv image viewer</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>vifm</icon>
+	<name>Open Vifm</name>
+	<submenu></submenu>
+	<unique-id>1709443420957855-2</unique-id>
+	<command>st -e sh -c &quot;vifm %f; exec bash&quot;</command>
+	<description>Open Vi File Manager here</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+</actions>
