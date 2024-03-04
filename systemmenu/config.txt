@@ -1,6 +1,7 @@
 status,dwmstatusmenu 
 network,nm-connection-editor
 storage,storage
+sync drive,syncmenu
 dracula,dracula
 wifi toggle,wifiset
 wifi off,wifiset off
