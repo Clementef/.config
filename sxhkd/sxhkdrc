@@ -116,16 +116,22 @@ super + n
 # ----------------------
 #   file explorer
 
-super + e
+super + shift + e
 	thunar
+
+# ----------------------
+#   file explorer
+
+super + e
+	vifmmenu
 
 # ----------------------
 #  screenshot
 
-super + x
+super + 4
 	flameshot gui
 
-super + shift + x
+super + shift + 4
 	flameshot screen
 
 # ----------------------
