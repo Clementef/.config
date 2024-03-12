@@ -1,6 +1,7 @@
 status,dwmstatusmenu 
 network,nm-connection-editor
 storage,storage
+snapshot,usersnapshot
 sync drive,syncmenu
 dracula,dracula
 wifi toggle,wifiset
