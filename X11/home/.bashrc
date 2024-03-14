@@ -10,8 +10,8 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # source git-completion and -prompt
-. ~/git-completion.bash
-. ~/git-prompt.sh
+. ~/.resources/git-completion.bash
+. ~/.resources/git-prompt.sh
 PS1='\n\
 \[\e[35m\]\u@\W\[\e[0m\] \
 \[\e[92m\]$(__git_ps1 "(%s)")\[\e[0m\]\n\
