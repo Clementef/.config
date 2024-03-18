@@ -5,3 +5,4 @@
 .xscreensaver
 .Xresources
 .profile
+.Rprofile

@@ -7,4 +7,5 @@ dracula,dracula
 wifi toggle,wifiset
 wifi off,wifiset off
 wifi on,wifiset on
+vpn,vpnmenu
 wallpaper,wallpapermenu

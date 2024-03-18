@@ -4,6 +4,7 @@
 # firefox
 export MOZ_USE_XINPUT2=1
 export BROWSER=firefox
+export EDITOR=nvim
 
 # PATH
 export PATH=$PATH:/usr/lib/rstudio/

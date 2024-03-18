@@ -119,11 +119,8 @@ super + n
 super + shift + e
 	thunar
 
-# ----------------------
-#   file explorer
-
 super + e
-	vifmmenu
+    st_init -e "vifm"
 
 # ----------------------
 #  screenshot
@@ -138,14 +135,5 @@ super + shift + 4
 #  R calculator
 
 super + r
-    alacritty -e R
-
-# ----------------------
-#  neovim
-
-super + v
-    alacritty -e nvim
-
-super + shift + v
-    alacritty -e vifm ~
+    st_init "R -q"
 

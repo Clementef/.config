@@ -9,6 +9,14 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+# path
+export PATH=$PATH:$HOME/documents/software/scripts/
+
+# aliases
+alias py='python'
+alias pym='python -m'
+alias imgs='nsxiv -b *'
+
 # source git-completion and -prompt
 . ~/.resources/git-completion.bash
 . ~/.resources/git-prompt.sh

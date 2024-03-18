@@ -1,30 +1,15 @@
-" vim: filetype=vifm :
-" Sample configuration file for vifm (last updated: 3 April, 2023)
-" You can edit this file by hand.
-" The " character at the beginning of a line comments out the line.
-" Blank lines are ignored.
-" The basic format for each item is shown with an example.
-
 " ------------------------------------------------------------------------------
 " Main settings
 " ------------------------------------------------------------------------------
 
-" Command used to edit files in various contexts.  The default is vim.
-" If you would like to use another vi clone such as Elvis or Vile
-" you will need to change this setting.
-" if executable('vim')
-"     set vicmd=vim
-" elseif executable('nvim')
-"     set vicmd=nvim
-" elseif executable('elvis')
-"     set vicmd=elvis\ -G\ termcap
-" elseif executable('vile')
-"     set vicmd=vile
-" elseif $EDITOR != ''
-"     echo 'Note: using `'.$EDITOR.'` as an editor'
-"     let &vicmd = $EDITOR
-" endif
-set vicmd=nvim
+" set editor
+if executable('nvim')
+    set vicmd=nvim
+elseif executable('vim')
+    set vicmd=vim
+elseif executable('vi')
+    set vicmd=vi
+endif
 
 " This makes vifm perform file operations on its own instead of relying on
 " standard utilities like `cp`.  While using `cp` and alike is a more universal
@@ -55,7 +40,7 @@ set nofollowlinks
 set sortnumbers
 
 " Maximum number of changes that can be undone.
-set undolevels=100
+set undolevels=500
 
 " Use Vim's format of help file (has highlighting and "hyperlinks").
 " If you would rather use a plain text help file set novimhelp.
@@ -100,7 +85,7 @@ if !has('win')
 endif
 
 " Set custom status line look
-set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+set statusline="  %= %A %10u:%-7g %15s %20d  "
 
 " List of color schemes to try (picks the first one supported by the terminal)
 colorscheme dracula Default-256 Default
@@ -239,10 +224,10 @@ fileviewer {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 filextype {*.xhtml,*.html,*.htm},<text/html>
         \ {Open with nvim}
         \ nvim %f,
-        \ {Open with qutebrowser}
-        \ qutebrowser %f %i,
         \ {Open with firefox}
         \ firefox %f &,
+        \ {Open with qutebrowser}
+        \ qutebrowser %f %i,
 filetype {*.xhtml,*.html,*.htm},<text/html> links, lynx
 
 " Object
@@ -273,10 +258,10 @@ filextype {.blend}
         \ {Open in Blender}
         \ blender %c,
 filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
+        \ {View in sxiv}
+        \ nsxiv -b -a %f,
         \ {View in feh}
         \ feh %f,
-        \ {View in sxiv}
-        \ nsxiv %f,
         \ {View in gpicview}
         \ gpicview %c,
         \ {View in shotwell}
