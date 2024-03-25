@@ -1,5 +1,7 @@
-set statusbar-h-padding 20
-set statusbar-v-padding 10
+set statusbar-h-padding 5
+set statusbar-v-padding 5
+set window-title-basename true
+set statusbar-basename true
 set statusbar-page-percent true
 set page-padding 1
 set guioptions none
@@ -11,25 +13,36 @@ map = zoom in
 map - zoom out
 map + zoom best-fit
 map i recolor
+map I recolor
 map p print
 map R reload
+map r reload
 map d scroll half-down
 map u scroll half-up
 map D toggle_page_mode
-map S toggle_statusbar
+map b toggle_statusbar
+map B toggle_statusbar
 map f toggle_fullscreen
+map F toggle_fullscreen
+map Q quit
+
 map [fullscreen] ; focus_inputbar :
 map [fullscreen] = zoom in
 map [fullscreen] - zoom out
 map [fullscreen] + zoom best-fit
 map [fullscreen] i recolor
+map [fullscreen] I recolor
 map [fullscreen] p print
 map [fullscreen] R reload
+map [fullscreen] r reload
 map [fullscreen] d scroll half-down
 map [fullscreen] u scroll half-up
 map [fullscreen] D toggle_page_mode
-map [fullscreen] S toggle_statusbar
+map [fullscreen] b toggle_statusbar
+map [fullscreen] B toggle_statusbar
 map [fullscreen] f toggle_fullscreen
+map [fullscreen] F toggle_fullscreen
+map [fullscreen] Q quit
 
 set font "FiraCode Nerd Font 11"
 set statusbar-home-tilde true
