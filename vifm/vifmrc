@@ -387,6 +387,11 @@ filextype *.Rproj
         \ {View in Rstudio}
         \ rstudio %f &,
 
+" sqlite3 databases
+filextype *.db
+        \ {View in sqlitebrowser}
+        \ sqlitebrowser %f &,
+
 " Directories
 filextype */
         \ {View in thunar}
