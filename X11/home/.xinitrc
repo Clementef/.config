@@ -6,11 +6,12 @@
 # X mouse settings
 x_reset
 
+~/.fehbg & # wallpaper
+firefox & # web browser
+bitwarden-desktop & # pass manager
 sxhkd & # keymap
 dunst & # notifications
-~/.fehbg & # wallpaper
 unclutter -idle 0.6 & # cursor hiding
-firefox & # web browser
 udiskie & # usb automounting
 xscreensaver -no-splash & # screen lock
 dwmstatus & # status bar

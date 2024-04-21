@@ -3,6 +3,7 @@ fact = function(x) { factorial(x) }
 ln = function(x) { log(x) }
 e = exp(1)
 tau = 2*pi
+quit = function() { q(save = "no") }
 
 # init message
 v = R.version

@@ -1,14 +1,15 @@
-@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
-    body{
-        background-color: #282a36 !important;
-    }
+
+@-moz-document url-prefix(about:home), url-prefix(about:newtab), url-prefix(about:blank) {
+  body {
+    background-color: #282a36 !important;
+  }
 }
 
-@-moz-document domain(lite.duckduckgo.com) {
+/* @-moz-document domain(lite.duckduckgo.com) {
     body {background:#282a36 !important;}
     a {color: #f8f8f2 !important;}
     span.link-text {color: #bd93f9 !important;}
-    td {color: #6272a4 !important;}
+    td {color: #f8f8f2 !important;}
     .navbutton {color: #6272a4 !important;}
     .header { display: none; }
     input[type=text] {
@@ -16,4 +17,5 @@
         background-color: #282a36!important;
         border: 1px solid #44475a!important;
     }
-}
+} */
+

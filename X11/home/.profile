@@ -1,18 +1,19 @@
 # .profile
 # load PATH and other environment varaibles here.
 
-# firefox
+# defaults
 export MOZ_USE_XINPUT2=1
-export BROWSER=firefox
+# expot BROWSER=firefox
 export EDITOR=nvim
 
 # PATH
-export PATH=$PATH:/usr/lib/rstudio/
-export PATH=$PATH:/usr/local/bin/personal/
-export PATH=$PATH:/usr/local/bin/personal/rmd/
-export PATH=$PATH:/usr/local/bin/personal/notes/
-export PATH=$PATH:/usr/local/bin/personal/dwmstatus/
-export PATH=$PATH:/usr/local/bin/personal/colorscripts/
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin/rmd
+export PATH=$PATH:$HOME/bin/dmenu
+export PATH=$PATH:$HOME/bin/notes
+export PATH=$PATH:$HOME/bin/pacman
+export PATH=$PATH:$HOME/bin/dwmstatus
+export PATH=$PATH:$HOME/bin/colorscripts
 
 # pfetch
 export PF_INFO="title os host kernel memory pkgs shell uptime"
