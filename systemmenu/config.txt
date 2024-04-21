@@ -3,9 +3,12 @@ network,nm-connection-editor
 storage,storage
 snapshot,usersnapshot
 sync drive,syncmenu
-dracula,dracula
+dracula,notify-send -u "critical" "dracula" "$(dracula)"
 wifi toggle,wifiset
 wifi off,wifiset off
 wifi on,wifiset on
 vpn,vpnmenu
 wallpaper,wallpapermenu
+window id,notify-send -u "normal" "$(window_id)"
+screenshot,flameshot screen
+screenshot selection,flameshot gui

@@ -40,20 +40,23 @@ XF86KbdBrightnessDown
 XF86AudioPrev
     notify-send "audio prev"
 
+# ----------------------
+#   Screenshot
+
 XF86AudioPlay
-    notify-send "audio play"
+    flameshot gui
 
 XF86AudioNext
-    notify-send "audio next"
+    flameshot screen
 
 # ----------------------
 #   Mac Keys
 
 XF86LaunchA
-    blocks
+    notify-send -u "normal" -r "1006" "$(blocks)"
 
 XF86LaunchB
-    storage
+    notify-send -u normal -r "1004" "storage: $(storage)"
 
 # ----------------------
 #   sound
@@ -121,15 +124,6 @@ super + shift + e
 
 super + e
     st_init -e "vifm"
-
-# ----------------------
-#  screenshot
-
-super + 4
-	flameshot gui
-
-super + shift + 4
-	flameshot screen
 
 # ----------------------
 #  R calculator
