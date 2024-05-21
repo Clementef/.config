@@ -1,4 +1,5 @@
 #!/bin/sh
+# firefox_profile is a bin script
 chrome_path="$(firefox_profile)chrome"
 destination_dir="$HOME/.config/firefox_css"
 cp -r "$chrome_path"/* "$destination_dir"/

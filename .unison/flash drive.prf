@@ -1,0 +1,6 @@
+# Unison preferences
+label = samsung fit usb
+root = /home/clem/documents
+root = /run/media/clem/Samsung USB
+fat = true
+ignore = Name {.[^.]*}

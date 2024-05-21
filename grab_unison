@@ -1,0 +1,4 @@
+#!/bin/sh
+chrome_path="$HOME/.unison"
+destination_dir="$HOME/.config/.unison"
+cp -r "$chrome_path"/* "$destination_dir"/
