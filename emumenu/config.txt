@@ -1,0 +1,6 @@
+NES,fceux & disown
+SNES,snes9x-gtk & disown
+GB,visualboyadvance-m & disown
+GBC,visualboyadvance-m & disown
+GBA,visualboyadvance-m & disown
+DS,desmume & disown

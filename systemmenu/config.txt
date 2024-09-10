@@ -2,13 +2,16 @@ status,dwmstatusmenu
 network,nm-connection-editor
 storage,storage
 snapshot,usersnapshot
-sync drive,syncmenu
+pacman update,pacman_update_window
+yay update,yay_update_window
+pacman & yay update,pacman_yay_update_window
+sync drive,unison-gui
 dracula,notify-send -u "critical" "dracula" "$(dracula)"
 wifi toggle,wifiset
 wifi off,wifiset off
 wifi on,wifiset on
-vpn,vpnmenu
 wallpaper,wallpapermenu
 window id,notify-send -u "normal" "$(window_id)"
 screenshot,flameshot screen
 screenshot selection,flameshot gui
+update plocate,update_plocate_window

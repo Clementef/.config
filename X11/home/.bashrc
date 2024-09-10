@@ -14,9 +14,6 @@ alias py='python'
 alias pym='python -m'
 alias imgs='nsxiv -b -a *'
 
-# temp path
-# export PATH=$PATH:$HOME/bin/noti
-
 # source git scripts
 . ~/.resources/git-completion.bash
 . ~/.resources/git-prompt.sh

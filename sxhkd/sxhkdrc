@@ -56,7 +56,7 @@ XF86LaunchA
     notify-send -u "normal" -r "1006" "$(blocks)"
 
 XF86LaunchB
-    notify-send -u normal -r "1004" "storage: $(storage)"
+    notify-send -u normal -r "1004" "available storage: $(storage)"
 
 # ----------------------
 #   sound

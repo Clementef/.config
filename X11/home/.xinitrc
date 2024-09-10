@@ -8,7 +8,7 @@ x_reset
 
 ~/.fehbg & # wallpaper
 firefox & # web browser
-bitwarden-desktop & # pass manager
+# bitwarden-desktop & # pass manager
 sxhkd & # keymap
 dunst & # notifications
 unclutter -idle 0.6 & # cursor hiding
