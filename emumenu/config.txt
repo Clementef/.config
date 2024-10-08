@@ -1,5 +1,8 @@
 NES,fceux & disown
 SNES,snes9x-gtk & disown
+N64,st_init -e 'vifm "$HOME/documents/unpacked roms/N64"'
+GameCube,dolphin-emu
+Wii,dolphin-emu
 GB,visualboyadvance-m & disown
 GBC,visualboyadvance-m & disown
 GBA,visualboyadvance-m & disown

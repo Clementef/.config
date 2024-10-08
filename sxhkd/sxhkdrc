@@ -92,6 +92,9 @@ super + o
 	pdfmenu
 
 super + i
+	emumenu
+
+super + g
 	cmdmenu
 
 super + u

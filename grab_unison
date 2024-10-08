@@ -1,4 +1,5 @@
 #!/bin/sh
 chrome_path="$HOME/.unison"
 destination_dir="$HOME/.config/.unison"
+mkdir -p "$destination_dir"
 cp -r "$chrome_path"/* "$destination_dir"/

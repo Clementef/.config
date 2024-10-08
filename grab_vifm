@@ -1,0 +1,5 @@
+#!/bin/sh
+config_path="$HOME/.vifm"
+destination_dir="$HOME/.config/.vifm"
+mkdir -p "$destination_dir"
+cp -r "$config_path"/* "$destination_dir"/

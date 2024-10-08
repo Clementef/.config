@@ -16,7 +16,7 @@ udiskie & # usb automounting
 xscreensaver -no-splash & # screen lock
 dwmstatus & # status bar
 picom --config "$HOME/.config/picom/picom.conf" & # window compositor
-nordvpn c & # vpn
+# nordvpn c & # vpn
 exec dwm # window manager
 # qtile start
 

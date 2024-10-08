@@ -9,11 +9,6 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-# aliases
-alias py='python'
-alias pym='python -m'
-alias imgs='nsxiv -b -a *'
-
 # source git scripts
 . ~/.resources/git-completion.bash
 . ~/.resources/git-prompt.sh

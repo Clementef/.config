@@ -40,3 +40,6 @@ PySimpleGUI/
 TasEmulators/
 bolt-launcher/
 qrcp/
+.vifm/Trash/
+.vifm/scripts/
+.vifm/vifminfo.json*
