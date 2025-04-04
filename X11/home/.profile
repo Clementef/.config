@@ -1,4 +1,5 @@
 # .profile
+#
 # load PATH and other environment varaibles here.
 
 # defaults
@@ -6,7 +7,7 @@ export MOZ_USE_XINPUT2=1
 # expot BROWSER=firefox
 export EDITOR=nvim
 # external python venvs
-export VENV="$HOME/documents/software/python/external_venvs"
+export VENV="$HOME/documents/software/env"
 
 # PATH
 # default
@@ -22,6 +23,7 @@ export PATH=$PATH:$HOME/bin/system
 export PATH=$PATH:$HOME/bin/dwmstatus
 export PATH=$PATH:$HOME/bin/colorscripts
 export PATH=$PATH:$HOME/bin/plocate
+export PATH=$PATH:$HOME/bin/pico-8
 
 # pfetch
 export PF_INFO="title os host kernel memory pkgs shell uptime"

@@ -2,4 +2,5 @@
 config_path="$HOME/.vifm"
 destination_dir="$HOME/.config/.vifm"
 mkdir -p "$destination_dir"
-cp -r "$config_path"/* "$destination_dir"/
+cp -r "$config_path"/colors/* "$destination_dir"/colors/
+cp -r "$config_path"/vifmrc* "$destination_dir"/

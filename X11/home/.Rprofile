@@ -1,4 +1,6 @@
 # helper functions
+ceil = function(x) { ceiling(x) }
+flr = function(x) { floor(x) }
 fact = function(x) { factorial(x) }
 ln = function(x) { log(x) }
 e = exp(1)
