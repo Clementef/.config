@@ -12,18 +12,21 @@ alt + s
 
 # ----------------------
 #   power button override
+#
+# XF86PowerOff
+#     notify-send "power button" && xscreensaver-command -lock
 
-XF86PowerOff
+XF86ScreenSaver
     xscreensaver-command -lock
 
 # ----------------------
 #   brightness
 
 XF86MonBrightnessDown
-    screen_brightness -1
+    screen_brightness -250
 
 XF86MonBrightnessUp
-    screen_brightness 1
+    screen_brightness 250
 
 # ----------------------
 #   keyboard backlight
@@ -92,7 +95,7 @@ super + o
 	pdfmenu
 
 super + i
-	emumenu
+	pavucontrol
 
 super + g
 	cmdmenu
@@ -117,7 +120,10 @@ super + Return
 # ----------------------
 #   firefox
 super + n
-    firefox
+    brave
+
+super + shift + n
+    brave --incognito
 
 # ----------------------
 #   file explorer

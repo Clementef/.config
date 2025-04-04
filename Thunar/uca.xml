@@ -44,7 +44,7 @@
 	<name>Open All Images</name>
 	<submenu></submenu>
 	<unique-id>1709447848442417-1</unique-id>
-	<command>nsxiv %f/*</command>
+	<command>nsxiv -ab %f/*</command>
 	<description>Open all images in directory with nsxiv image viewer</description>
 	<range>*</range>
 	<patterns>*</patterns>

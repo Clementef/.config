@@ -1,4 +1,5 @@
 status,dwmstatusmenu 
+resolution,resmenu
 network,nm-connection-editor
 storage,storage
 snapshot,usersnapshot
