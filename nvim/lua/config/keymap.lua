@@ -19,29 +19,28 @@ function vmapcmd(shortcut, command)
     mapcmd("v", shortcut, command, { noremap = true, silent = true })
 end
 
--- remove highlights
+-- -- toggle line wrap
+nmapcmd('<leader>w', 'set wrap!')
+
+-- -- copy to system clipboard
+nmap('<leader>y', '"+y')
+vmap('<leader>y', '"+y')
+
+-- -- remove highlights
 nmapcmd(' ', 'nohl')
 nmapcmd('<ESC>', 'nohl')
 
 -- save
 nmapcmd('<C-s>', 'w')
 
--- open in pcmanfm
-nmapcmd('<leader>e', 'silent !pcmanfm %:p:h')
-
-nmapcmd('<leader>r', '!run %')
-
 -- rebind command
 nmap(';',':')
 
--- select all
--- nmap('<C-a>','GVgg')
-
 -- split navigation
-nmap('<C-h>','<C-w>h')
-nmap('<C-j>','<C-w>j')
-nmap('<C-k>','<C-w>k')
-nmap('<C-l>','<C-w>l')
+vim.keymap.set('n', '<A-h>', '<C-w>h', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-j>', '<C-w>j', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-k>', '<C-w>k', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-l>', '<C-w>l', { noremap = true, silent = true })
 
 -- create splits
 nmap('<leader>s', '<C-w>v')
@@ -53,58 +52,15 @@ nmap('<C-Down>', '<C-w>+')
 nmap('<C-Up>', '<C-w>-')
 nmap('<C-Right>', '<C-w>>')
 
--- telescope
-local telescope = require('telescope.builtin')
-mapcmd("n", "<leader>ff", "Telescope find_files theme=dropdown", {})
-mapcmd("n", "<leader>fg", "Telescope live_grep theme=dropdown", {})
-mapcmd("n", "<leader>fb", "Telescope buffers theme=dropdown", {})
-mapcmd("n", "<leader>fh", "Telescope help_tags theme=dropdown", {})
-mapcmd("n", "<leader>fl", "Telescope current_buffer_fuzzy_find theme=dropdown", {})
-mapcmd("n", "<leader>fo", "Telescope oldfiles theme=dropdown", {})
-
--- telescope file browser
-mapcmd("n", "<leader>fj", "Telescope file_browser path=%:p:h select_buffer=true", {})
-mapcmd("n", "<leader>fk", "Telescope file_browser select_buffer=true", {})
-
 -- Lazy
 nmapcmd('<leader>l','Lazy')
 
--- Zen Mode
-nmapcmd('<leader>z','ZenMode')
-
--- Lorem
-nmapcmd('<leader>ii', 'LoremIpsum')
-nmapcmd('<leader>i1', 'LoremIpsum 100')
-nmapcmd('<leader>i2', 'LoremIpsum 200')
-nmapcmd('<leader>i3', 'LoremIpsum 300')
-nmapcmd('<leader>i4', 'LoremIpsum 400')
-nmapcmd('<leader>i5', 'LoremIpsum 500')
-nmapcmd('<leader>i6', 'LoremIpsum 600')
-nmapcmd('<leader>i7', 'LoremIpsum 700')
-nmapcmd('<leader>i7', 'LoremIpsum 700')
-nmapcmd('<leader>i7', 'LoremIpsum 700')
-nmapcmd('<leader>i8', 'LoremIpsum 800')
-nmapcmd('<leader>i9', 'LoremIpsum 900')
-
--- MarkdownPreview
-nmapcmd('<leader>m', 'MarkdownPreview')
+-- StartupTime
+nmapcmd('<leader>t','StartupTime')
 
 -- insert line in normal mode
-nmap('<C-m>', 'o<ESC>')
-nmap('<C-n>', 'O<ESC>')
-
--- check health
-nmapcmd('<leader>h', 'checkhealth')
-
--- neorg
-nmapcmd('<leader>oc', 'Neorg toggle-concealer')
-nmapcmd('<leader>on', 'Neorg workspace notes')
-
--- display startup
-nmapcmd('<leader>d', 'Startup display')
-
--- D deletes line contents
-nmap('D', '0d$')
+nmap('<A-m>', 'o<ESC>')
+nmap('<A-n>', 'O<ESC>')
 
 -- move lines up and down in visual mode
 vmap('J', ":m '>+1<CR>gv=gv")
@@ -114,12 +70,29 @@ vmap('K', ":m '<-2<CR>gv=gv")
 vmap("H", "<gv")
 vmap("L", ">gv")
 
--- undo tree
-nmapcmd('<leader>u', 'UndotreeToggle')
+-- D deletes line contents
+nmap('D', '0d$')
 
--- set working directory
-mapcmd('n', '<leader>p', 'cd %:p:h', {noremap = true})
-mapcmd('n', '<leader>q', 'q', {noremap = true})
+-- check health
+nmapcmd('<leader>h', 'checkhealth')
 
--- delete current buffer
-nmapcmd('<leader>bq', 'bd')
+-- telescope
+-- local telescope = require('telescope.builtin')
+mapcmd("n", "<leader>ff", "Telescope find_files theme=dropdown", {})
+mapcmd("n", "<leader>fg", "Telescope live_grep theme=dropdown", {})
+mapcmd("n", "<leader>fb", "Telescope buffers theme=dropdown", {})
+mapcmd("n", "<leader>fh", "Telescope help_tags theme=dropdown", {})
+mapcmd("n", "<leader>fl", "Telescope current_buffer_fuzzy_find theme=dropdown", {})
+mapcmd("n", "<leader>fo", "Telescope oldfiles theme=dropdown", {})
+mapcmd("n", "<leader>fm", "Telescope man_pages theme=dropdown", {})
+
+-- -- telescope file browser
+-- mapcmd("n", "<leader>fj", "Telescope file_browser path=%:p:h select_buffer=true", {})
+-- mapcmd("n", "<leader>fk", "Telescope file_browser select_buffer=true", {})
+
+-- -- set working directory
+-- mapcmd('n', '<leader>p', 'cd %:p:h', {noremap = true})
+-- mapcmd('n', '<leader>q', 'q', {noremap = true})
+
+-- -- delete current buffer
+-- nmapcmd('<leader>bq', 'bd')
