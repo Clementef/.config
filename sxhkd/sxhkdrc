@@ -16,7 +16,10 @@ alt + s
 # XF86PowerOff
 #     notify-send "power button" && xscreensaver-command -lock
 
-XF86ScreenSaver
+# XF86ScreenSaver
+#     xscreensaver-command -lock
+
+XF86Launch1
     xscreensaver-command -lock
 
 # ----------------------
@@ -31,11 +34,11 @@ XF86MonBrightnessUp
 # ----------------------
 #   keyboard backlight
 
-XF86KbdBrightnessUp
-    keyboard_brightness 25
-
-XF86KbdBrightnessDown
-    keyboard_brightness -25
+# XF86KbdBrightnessUp
+#     keyboard_brightness 25
+#
+# XF86KbdBrightnessDown
+#     keyboard_brightness -25
 
 # ----------------------
 #   Media Keys
@@ -55,23 +58,23 @@ XF86AudioNext
 # ----------------------
 #   Mac Keys
 
-XF86LaunchA
-    notify-send -u "normal" -r "1006" "$(blocks)"
-
-XF86LaunchB
-    notify-send -u normal -r "1004" "available storage: $(storage)"
+# XF86LaunchA
+#     notify-send -u "normal" -r "1006" "$(blocks)"
+#
+# XF86LaunchB
+#     notify-send -u normal -r "1004" "available storage: $(storage)"
 
 # ----------------------
 #   sound
 
-XF86AudioLowerVolume
-    sound_change 5%-
-
-XF86AudioRaiseVolume
-    sound_change 5%+
-
-XF86AudioMute
-    sound_toggle
+# XF86AudioLowerVolume
+#     sound_change 5%-
+#
+# XF86AudioRaiseVolume
+#     sound_change 5%+
+#
+# XF86AudioMute
+#     sound_toggle
 
 # ----------------------
 #   reset X mouse/keyboard settings
@@ -95,7 +98,7 @@ super + o
 	pdfmenu
 
 super + i
-	pavucontrol
+	st_init "alsamixer; exit"
 
 super + g
 	cmdmenu
@@ -129,7 +132,7 @@ super + shift + n
 #   file explorer
 
 super + shift + e
-	thunar
+	pcmanfm
 
 super + e
     st_init -e "vifm"

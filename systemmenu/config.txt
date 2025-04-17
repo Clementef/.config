@@ -1,18 +1,5 @@
-status,dwmstatusmenu 
-resolution,resmenu
-network,nm-connection-editor
-storage,storage
-snapshot,usersnapshot
-pacman update,pacman_update_window
-yay update,yay_update_window
-pacman & yay update,pacman_yay_update_window
-sync drive,unison-gui
-dracula,notify-send -u "critical" "dracula" "$(dracula)"
-wifi toggle,wifiset
-wifi off,wifiset off
-wifi on,wifiset on
-wallpaper,wallpapermenu
+storage,notify-send -u "normal" "$(storage)"
 window id,notify-send -u "normal" "$(window_id)"
+xev keycodes,st_init "xev_print_keycodes"
 screenshot,flameshot screen
 screenshot selection,flameshot gui
-update plocate,update_plocate_window

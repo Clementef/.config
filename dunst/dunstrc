@@ -25,7 +25,8 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    # width = 300
+    width = (300, 500)
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
@@ -36,13 +37,14 @@
     #       and the given value is treated as the maximum height
 
     # Position the notification in the top right corner
-    origin = bottom-right
+    # origin = top-right
+    origin = bottom-right 
 
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    # bottom-right of window offset: (4,26)
-    offset = (8, 30)
+    # offset = (10, 10)
+    offset = (11, 32)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -96,7 +98,7 @@
     # notifications.
     # Set to 0 to disable.
     # If gap_size is greater than 0, this setting will be ignored.
-    separator_height = 2
+    separator_height = 1
 
     # Padding between text and separator.
     padding = 8
@@ -145,7 +147,7 @@
 
     ### Text ###
 
-    font = FiraCode Nerd Font 12
+    font = Fira Code 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -228,7 +230,8 @@
     # icon_theme = "Adwaita, breeze"
 
     # Align icons left/right/top/off
-    icon_position = left
+    # icon_position = left
+    icon_position = off
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
@@ -342,30 +345,28 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#282a36"
-    foreground = "#6272a4"
-    frame_color = "#6272a4"
-    timeout = 2
+    background = "#222222"
+    foreground = "#888888"
+    timeout = 10
     # Icon for notifications with low urgency
-    # default_icon = dialog-information
+    default_icon = dialog-information
 
 [urgency_normal]
-    background = "#282a36"
-    foreground = "#f8f8f2"
-    frame_color = "#bd93f9"
-    timeout = 5
+    background = "#285577"
+    foreground = "#ffffff"
+    timeout = 10
     override_pause_level = 30
     # Icon for notifications with normal urgency
-    # default_icon = dialog-information
+    default_icon = dialog-information
 
 [urgency_critical]
-    background = "#282a36"
-    foreground = "#ff5555"
-    frame_color = "#ff5555"
+    background = "#900000"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
     timeout = 0
     override_pause_level = 60
     # Icon for notifications with critical urgency
-    # default_icon = dialog-warning
+    default_icon = dialog-warning
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
