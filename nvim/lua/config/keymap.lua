@@ -43,8 +43,8 @@ vim.keymap.set('n', '<A-k>', '<C-w>k', { noremap = true, silent = true })
 vim.keymap.set('n', '<A-l>', '<C-w>l', { noremap = true, silent = true })
 
 -- create splits
-nmap('<leader>s', '<C-w>v')
-nmap('<leader>S', '<C-w>s')
+nmap('<leader>v', '<C-w>v')
+nmap('<leader>V', '<C-w>s')
 
 -- resize splits
 nmap('<C-Left>', '<C-w><')
@@ -53,10 +53,10 @@ nmap('<C-Up>', '<C-w>-')
 nmap('<C-Right>', '<C-w>>')
 
 -- Lazy
-nmapcmd('<leader>l','Lazy')
+nmapcmd('<leader>dl','Lazy')
 
 -- StartupTime
-nmapcmd('<leader>t','StartupTime')
+nmapcmd('<leader>ds','StartupTime')
 
 -- insert line in normal mode
 nmap('<A-m>', 'o<ESC>')
@@ -74,21 +74,21 @@ vmap("L", ">gv")
 nmap('D', '0d$')
 
 -- check health
-nmapcmd('<leader>h', 'checkhealth')
+nmapcmd('<leader>dh', 'checkhealth')
 
 -- telescope
 -- local telescope = require('telescope.builtin')
-mapcmd("n", "<leader>ff", "Telescope find_files theme=dropdown", {})
-mapcmd("n", "<leader>fg", "Telescope live_grep theme=dropdown", {})
-mapcmd("n", "<leader>fb", "Telescope buffers theme=dropdown", {})
-mapcmd("n", "<leader>fh", "Telescope help_tags theme=dropdown", {})
-mapcmd("n", "<leader>fl", "Telescope current_buffer_fuzzy_find theme=dropdown", {})
-mapcmd("n", "<leader>fo", "Telescope oldfiles theme=dropdown", {})
-mapcmd("n", "<leader>fm", "Telescope man_pages theme=dropdown", {})
+mapcmd("n", "<leader>f", "Telescope find_files theme=dropdown", {})
+mapcmd("n", "<leader>g", "Telescope live_grep theme=dropdown", {})
+mapcmd("n", "<leader>b", "Telescope buffers theme=dropdown", {})
+mapcmd("n", "<leader>h", "Telescope help_tags theme=dropdown", {})
+mapcmd("n", "<leader>l", "Telescope current_buffer_fuzzy_find theme=dropdown", {})
+mapcmd("n", "<leader>o", "Telescope oldfiles theme=dropdown", {})
+mapcmd("n", "<leader>m", "Telescope man_pages theme=dropdown", {})
 
 -- -- telescope file browser
 -- mapcmd("n", "<leader>fj", "Telescope file_browser path=%:p:h select_buffer=true", {})
--- mapcmd("n", "<leader>fk", "Telescope file_browser select_buffer=true", {})
+mapcmd("n", "<leader>e", "Telescope file_browser select_buffer=true", {})
 
 -- -- set working directory
 -- mapcmd('n', '<leader>p', 'cd %:p:h', {noremap = true})
