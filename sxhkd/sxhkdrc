@@ -112,8 +112,8 @@ super + y
 super + v
 	drivemenu
 
-super + shift + v
-	unmountmenu
+# super + shift + v
+# 	unmountmenu
 
 # ----------------------
 #   terminal
@@ -135,7 +135,7 @@ super + shift + e
 	pcmanfm
 
 super + e
-    st_init -e "vifm"
+    st_init -e "lf"
 
 # ----------------------
 #  R calculator

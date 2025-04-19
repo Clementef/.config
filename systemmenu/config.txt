@@ -1,4 +1,5 @@
 storage,notify-send -u "normal" "$(storage)"
+mullvad check,notify-send -u "normal" "$(mullvad_check)"
 window id,notify-send -u "normal" "$(window_id)"
 xev keycodes,st_init "xev_print_keycodes"
 screenshot,flameshot screen
