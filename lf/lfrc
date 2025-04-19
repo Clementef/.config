@@ -1,0 +1,102 @@
+# ---
+# basic settings
+# ---
+
+set shell sh
+set hidden true
+set ignorecase true
+set scrolloff 4
+
+# use dim attribute instead of underline for
+# preview pane cursor
+set cursorpreviewfmt "\033[7;2m"
+
+# ---
+# functions
+# ---
+
+cmd touch %{{
+    printf "file name: "
+    read fname
+    touch "$fname"
+    lf -remote "send $id select \"$fname\""
+}}
+
+cmd mkdir %{{
+    printf "directory name: "
+    read dirname
+    mkdir "$dirname"
+    lf -remote "send $id select \"$dirname\""
+}}
+
+cmd openfile %{{
+	printf "file name: "
+	read ans
+	$EDITOR $ans
+}}
+
+cmd smartopen ${{
+    if [ -d "$f" ]; then
+        lf -remote "send $id cd \"$f\""
+    else
+        $EDITOR "$f"
+    fi
+}}
+
+# trash and delete file
+cmd delete ${{
+    set -f
+    printf "$fx\n"
+    printf "really delete?[y/n]"
+    read ans
+    [ "$ans" = "y" ] && rm -rf $fx
+}}
+
+# make sure trash folder exists
+%mkdir -p ~/.trash
+
+# (also see 'man mv' for backup/overwrite options)
+cmd trash %set -f; mv -t ~/.trash $fx
+
+cmd trashrecall ${{
+	selected_file="$(ls -At $TRASH | dmenu)"
+    if [ -n "$selected_file" ]; then
+        mv "$TRASH/$selected_file" "$PWD"
+        lf -remote "send $id reload"
+    fi	
+}}
+
+# ---
+# binds
+# ---
+
+# free , for use as leader
+map ,
+map . bind-prev
+
+# create files and directories
+map ,f touch
+map ,d mkdir
+
+# open either directory or file
+map <enter> smartopen
+
+# file manipulation
+map r
+map c rename
+map x cut
+map X clear
+map v toggle
+map i invert
+map <esc> unselect
+
+# statistics
+map gs calcdirsize
+
+# trash and delete
+map d
+map dd trash
+map dr trashrecall
+map d<delete> delete
+map <delete> trash
+# map <delete> delete
