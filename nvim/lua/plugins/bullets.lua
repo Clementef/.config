@@ -1,1 +1,1 @@
-return { "bullets-vim/bullets.vim", ft = "md" }
+return { "bullets-vim/bullets.vim", ft = "markdown" }
