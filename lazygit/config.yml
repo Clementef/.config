@@ -1,0 +1,4 @@
+gui:
+  # Window border style.
+  # One of 'rounded' (default) | 'single' | 'double' | 'hidden'
+  border: single
