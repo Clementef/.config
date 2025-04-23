@@ -95,7 +95,7 @@ super + p
 	powermenu
 
 super + o
-	pdfmenu
+	st_init "smartfzf"
 
 super + i
 	st_init "alsamixer; exit"
@@ -104,7 +104,7 @@ super + g
 	cmdmenu
 
 super + u
-	notesmenu
+	st_init "htop"
 
 super + y
 	systemmenu
@@ -121,12 +121,12 @@ super + Return
     st
 
 # ----------------------
-#   firefox
+#   browserfirefox
 super + n
-    brave
+    librewolf
 
 super + shift + n
-    brave --incognito
+    librewolf --incognito
 
 # ----------------------
 #   file explorer
