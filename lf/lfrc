@@ -32,7 +32,7 @@ cmd mkdir %{{
 cmd openfile %{{
 	printf "file name: "
 	read ans
-	$EDITOR $ans
+	$EDITOR "$ans"
 }}
 
 cmd smartopen ${{
@@ -42,9 +42,9 @@ cmd smartopen ${{
         $EDITOR "$f"
     fi
 }}
-
+ 
 # trash and delete file
-cmd delete ${{
+cmd delete %{{
     set -f
     printf "$fx\n"
     printf "really delete?[y/n]"
@@ -52,19 +52,19 @@ cmd delete ${{
     [ "$ans" = "y" ] && rm -rf $fx
 }}
 
-# make sure trash folder exists
-%mkdir -p ~/.trash
-
-# (also see 'man mv' for backup/overwrite options)
-cmd trash %set -f; mv -t ~/.trash $fx
-
-cmd trashrecall ${{
-	selected_file="$(ls -At $TRASH | dmenu)"
-    if [ -n "$selected_file" ]; then
-        mv "$TRASH/$selected_file" "$PWD"
-        lf -remote "send $id reload"
-    fi	
-}}
+# # make sure trash folder exists
+# %mkdir -p ~/.trash
+# 
+# # (also see 'man mv' for backup/overwrite options)
+# cmd trash %set -f; mv -t ~/.trash $fx
+# 
+# cmd trashrecall ${{
+# 	selected_file="$(ls -At $TRASH | dmenu)"
+#     if [ -n "$selected_file" ]; then
+#         mv "$TRASH/$selected_file" "$PWD"
+#         lf -remote "send $id reload"
+#     fi	
+# }}
 
 # ---
 # binds
@@ -74,15 +74,19 @@ cmd trashrecall ${{
 map ,
 map . bind-prev
 
+# open shell
+map o shell
+map O shell-wait
+
 # create files and directories
 map ,f touch
 map ,d mkdir
 
 # open either directory or file
 map <enter> smartopen
+map l smartopen
 
 # file manipulation
-map r
 map c rename
 map x cut
 map X clear
@@ -90,13 +94,22 @@ map v toggle
 map i invert
 map <esc> unselect
 
+# execute files
+map r $$f
+map R !$f
+
 # statistics
+map gh
 map gs calcdirsize
+
+# trash scripts
+cmd trash %trash "$f"
+# cmd trash-restore $trash-restore "$f"
 
 # trash and delete
 map d
 map dd trash
-map dr trashrecall
+map dr trashrestore
 map d<delete> delete
 map <delete> trash
 # map <delete> delete
