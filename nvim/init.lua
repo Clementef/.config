@@ -1,4 +1,4 @@
--- load plugin manager
+-- load lazy nvim plugin manager
 require("config.lazy")
 
 -- load configuration

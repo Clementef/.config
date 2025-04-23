@@ -7,7 +7,7 @@ local g = vim.g
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
--- enable highlight groups
+-- enable 24-bit colors
 opt.termguicolors = true
 
 -- line numbers
