@@ -57,6 +57,9 @@ nmapcmd("<leader>dm", "Mason")
 -- Oil
 nmapcmd('<leader>o', 'Oil')
 
+-- zen
+nmapcmd('<leader>z', 'ZenMode')
+
 -- move lines up and down in visual mode
 vmap('J', ":m '>+1<CR>gv=gv")
 vmap('K', ":m '<-2<CR>gv=gv")
