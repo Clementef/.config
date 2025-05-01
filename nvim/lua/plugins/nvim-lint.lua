@@ -8,8 +8,10 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
+			lua = { "selene" },
+			html = { "htmlhint" },
 			c = { "cpplint" },
-			lua = { "luacheck" },
+			-- css = { "stylelint" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
@@ -21,9 +23,9 @@ return {
 			end,
 		})
 
-		vim.keymap.set("n", "<leader>i", function()
+		vim.keymap.set("n", "<leader>e", function()
 			lint.try_lint()
-			print("trying to lint")
+			print("linting")
 		end, { desc = "Trigger linting for current file" })
 	end,
 }
