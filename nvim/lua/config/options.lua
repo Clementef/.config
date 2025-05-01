@@ -26,6 +26,12 @@ opt.smartcase = true
 opt.hlsearch = true
 opt.incsearch = true
 
+-- tab character
+opt.tabstop = 4 -- tab character width
+opt.shiftwidth = 4 -- indent size
+opt.expandtab = false -- tab character used instead of space
+opt.softtabstop = 0 -- disable use of spaces + tabs
+
 -- default right split
 opt.splitright = true
 opt.splitbelow = true
@@ -39,9 +45,3 @@ opt.undofile = true
 -- keep cursor away from top/bottom
 -- while scrolling
 opt.scrolloff = 4
-
--- tab character
-opt.tabstop = 4 -- tab character width
-opt.shiftwidth = 4 -- indent size
-opt.expandtab = false -- tab character used instead of space
-opt.softtabstop = 0 -- disable use of spaces + tabs
